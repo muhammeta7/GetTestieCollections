@@ -1,7 +1,8 @@
 package rocks.zipcode;
 
-<<<<<<< HEAD
+import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Test;
 
 import java.util.TreeMap;
 
@@ -14,16 +15,37 @@ public class TestTreeMap {
         map.clear();
     }
 
+    @Test
+    public void TestGet() {
+        map.put("Moe", 1);
+        Assert.assertTrue(map.get("Moe") == 1);
+    }
 
-=======
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+    @Test
+    public void TestPut(){
+        map.put("Moe", 1);
+        Assert.assertFalse(map.isEmpty());
+    }
 
-import java.util.HashMap;
+    @Test
+    public void TestContainsValue(){
+        map.put("Moe", 1);
+        Assert.assertTrue(map.containsValue(1));
+    }
 
-public class TestTreeMap {
+    @Test
+    public void TestContainsKey(){
+        map.put("Moe", 1);
+        Assert.assertTrue(map.containsKey("Moe"));
+    }
 
-    
->>>>>>> 982f147f2873537bfebe53754541f981cfa9a5bb
+    @Test
+    public void TestEntrySet(){
+        map.put("Moe", 1);
+        map.put("Joe", 2);
+        int expected = 2;
+        Assert.assertEquals(map.entrySet().size(), expected);
+    }
+
+
 }

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class TestArrayList {
 
-    private static ArrayList<String> stringList = new ArrayList<>();
+    ArrayList<String> stringList = new ArrayList<>();
 
     @Before
     public void beforeEach(){

@@ -7,6 +7,7 @@ import org.junit.Test;
 import java.util.HashMap;
 
 public class TestHashMap {
+
     HashMap<Integer, String> map = new HashMap<>();
 
     @Before
