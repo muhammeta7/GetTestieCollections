@@ -28,7 +28,7 @@ public class TestVector {
         vector.add(1);
         vector.add(2);
         vector.add(3);
-        vector.remove(3);
+        vector.remove(2);
         Vector<Integer> newVector = new Vector<>();
         newVector.add(1);
         newVector.add(2);

@@ -27,7 +27,20 @@ public class TestComparable {
         people.add(person1);
 
         Collections.sort(people);
-        LOGGER.info(people.toString());
+    }
+
+    @Test
+    public void TestComparableForString(){
+        Assert.assertTrue(0 < "Beast".compareTo("Animal"));
+        Assert.assertFalse(0 > "Beast".compareTo("Animal"));
+    }
+
+    @Test
+    public void TestComparableForInteger(){
+        Integer one = 1;
+        Integer two = 2;
+        Assert.assertTrue(0 < two.compareTo(one));
+        Assert.assertFalse(0 > two.compareTo(one));
     }
 
 }
